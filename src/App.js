@@ -8,6 +8,7 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import PetCompanionPage from './pages/PetCompanionPage';
+import StoryTrackerPage from './pages/StoryTrackerPage';
 
 function App() {
   useEffect(() => {
@@ -69,6 +70,7 @@ function App() {
             </>
           } />
           <Route path="/pet-companion" element={<PetCompanionPage />} />
+          <Route path="/story-tracker" element={<StoryTrackerPage />} />
         </Routes>
       </div>
     </Router>

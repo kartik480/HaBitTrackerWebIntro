@@ -59,8 +59,8 @@ const Header = () => {
               
               {isDropdownOpen && (
                 <div className="dropdown-menu">
-                  <Link to="/pet-companion" onClick={closeDropdown}>Gamified Pet/Character Companion</Link>
-                  <a href="#story-driven" onClick={closeDropdown}>Story-Driven Habit Tracker</a>
+                      <Link to="/pet-companion" onClick={closeDropdown}>Gamified Pet/Character Companion</Link>
+                      <Link to="/story-tracker" onClick={closeDropdown}>Story-Driven Habit Tracker</Link>
                   <a href="#ai-coach" onClick={closeDropdown}>AI-Powered Habit Coach</a>
                   <a href="#social-circles" onClick={closeDropdown}>Habit Social Circles</a>
                   <a href="#mood-connection" onClick={closeDropdown}>Mood + Habit Connection</a>
