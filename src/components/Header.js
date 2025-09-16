@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +18,14 @@ const Header = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
   };
 
   return (
@@ -37,6 +47,30 @@ const Header = () => {
 
           <div className="header-actions">
             <a href="#contact" className="btn btn-primary">Download App</a>
+            
+            <div className="dropdown-container">
+              <button 
+                className="dropdown-toggle"
+                onClick={toggleDropdown}
+                aria-label="Toggle menu"
+              >
+                <span>☰</span>
+              </button>
+              
+              {isDropdownOpen && (
+                <div className="dropdown-menu">
+                  <Link to="/pet-companion" onClick={closeDropdown}>Gamified Pet/Character Companion</Link>
+                  <a href="#story-driven" onClick={closeDropdown}>Story-Driven Habit Tracker</a>
+                  <a href="#ai-coach" onClick={closeDropdown}>AI-Powered Habit Coach</a>
+                  <a href="#social-circles" onClick={closeDropdown}>Habit Social Circles</a>
+                  <a href="#mood-connection" onClick={closeDropdown}>Mood + Habit Connection</a>
+                  <a href="#surprise-rewards" onClick={closeDropdown}>Surprise Rewards System</a>
+                  <a href="#voice-tracking" onClick={closeDropdown}>Voice/Nudge Based Tracking</a>
+                  <a href="#reverse-tracker" onClick={closeDropdown}>Reverse Habit Tracker (Break Bad Habits)</a>
+                  <a href="#custom-worlds" onClick={closeDropdown}>Custom Habit Worlds</a>
+                </div>
+              )}
+            </div>
           </div>
 
           <button 

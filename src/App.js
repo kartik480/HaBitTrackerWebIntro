@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -6,6 +7,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import PetCompanionPage from './pages/PetCompanionPage';
 
 function App() {
   useEffect(() => {
@@ -53,14 +55,23 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <About />
-      <Services />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Header />
+              <Hero />
+              <About />
+              <Services />
+              <Contact />
+              <Footer />
+            </>
+          } />
+          <Route path="/pet-companion" element={<PetCompanionPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
