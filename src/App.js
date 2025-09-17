@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import PetCompanionPage from './pages/PetCompanionPage';
 import StoryTrackerPage from './pages/StoryTrackerPage';
+import AICoachPage from './pages/AICoachPage';
 
 function App() {
   useEffect(() => {
@@ -73,6 +74,7 @@ function App() {
           } />
           <Route path="/pet-companion" element={<PetCompanionPage />} />
           <Route path="/story-tracker" element={<StoryTrackerPage />} />
+          <Route path="/ai-coach" element={<AICoachPage />} />
         </Routes>
       </div>
     </Router>
