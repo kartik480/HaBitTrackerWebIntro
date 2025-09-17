@@ -32,9 +32,9 @@ const Header = () => {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="header-content">
-          <div className="logo">
-            <a href="#home">Kultivate</a>
-          </div>
+        <div className="logo">
+          <Link to="/">Kultivate</Link>
+        </div>
           
           <nav className={`nav ${isMobileMenuOpen ? 'nav-open' : ''}`}>
             <ul className="nav-list">
@@ -62,12 +62,11 @@ const Header = () => {
                       <Link to="/pet-companion" onClick={closeDropdown}>Gamified Pet/Character Companion</Link>
                       <Link to="/story-tracker" onClick={closeDropdown}>Story-Driven Habit Tracker</Link>
                   <Link to="/ai-coach" onClick={closeDropdown}>AI-Powered Habit Coach</Link>
-                  <a href="#social-circles" onClick={closeDropdown}>Habit Social Circles</a>
-                  <a href="#mood-connection" onClick={closeDropdown}>Mood + Habit Connection</a>
-                  <a href="#surprise-rewards" onClick={closeDropdown}>Surprise Rewards System</a>
-                  <a href="#voice-tracking" onClick={closeDropdown}>Voice/Nudge Based Tracking</a>
-                  <a href="#reverse-tracker" onClick={closeDropdown}>Reverse Habit Tracker (Break Bad Habits)</a>
-                  <a href="#custom-worlds" onClick={closeDropdown}>Custom Habit Worlds</a>
+                  <Link to="/social-circles" onClick={closeDropdown}>Habit Social Circles</Link>
+                  <Link to="/mood-connection" onClick={closeDropdown}>Mood + Habit Connection</Link>
+                  <Link to="/surprise-rewards" onClick={closeDropdown}>Surprise Rewards System</Link>
+                  <Link to="/voice-tracking" onClick={closeDropdown}>Voice & Quick Tracking</Link>
+                  <Link to="/reverse-tracker" onClick={closeDropdown}>Reverse Habit Tracker (Break Bad Habits)</Link>
                 </div>
               )}
             </div>

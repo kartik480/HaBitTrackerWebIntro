@@ -11,6 +11,12 @@ import Footer from './components/Footer';
 import PetCompanionPage from './pages/PetCompanionPage';
 import StoryTrackerPage from './pages/StoryTrackerPage';
 import AICoachPage from './pages/AICoachPage';
+import SocialCirclesPage from './pages/SocialCirclesPage';
+import MoodConnectionPage from './pages/MoodConnectionPage';
+import SurpriseRewardsPage from './pages/SurpriseRewardsPage';
+import VoiceTrackingPage from './pages/VoiceTrackingPage';
+import ReverseTrackerPage from './pages/ReverseTrackerPage';
+import CustomWorldsPage from './pages/CustomWorldsPage';
 
 function App() {
   useEffect(() => {
@@ -75,6 +81,12 @@ function App() {
           <Route path="/pet-companion" element={<PetCompanionPage />} />
           <Route path="/story-tracker" element={<StoryTrackerPage />} />
           <Route path="/ai-coach" element={<AICoachPage />} />
+          <Route path="/social-circles" element={<SocialCirclesPage />} />
+          <Route path="/mood-connection" element={<MoodConnectionPage />} />
+          <Route path="/surprise-rewards" element={<SurpriseRewardsPage />} />
+          <Route path="/voice-tracking" element={<VoiceTrackingPage />} />
+          <Route path="/reverse-tracker" element={<ReverseTrackerPage />} />
+          <Route path="/custom-worlds" element={<CustomWorldsPage />} />
         </Routes>
       </div>
     </Router>
