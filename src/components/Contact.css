@@ -9,8 +9,9 @@
 }
 
 .contact .section-title {
+  font-family: 'Archivo Black', sans-serif;
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 900;
   color: #000000 !important;
   margin-bottom: 1rem;
   background: none !important;
@@ -20,6 +21,8 @@
 }
 
 .contact-header .section-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: 900;
   color: #000000 !important;
   background: none !important;
   -webkit-background-clip: unset !important;
