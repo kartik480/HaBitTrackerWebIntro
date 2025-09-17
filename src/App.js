@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import AITeacher from './components/AITeacher';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -64,6 +65,7 @@ function App() {
               <Header />
               <Hero />
               <About />
+              <AITeacher />
               <Services />
               <Contact />
               <Footer />

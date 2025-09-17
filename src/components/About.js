@@ -16,9 +16,9 @@ const About = () => {
           <div className="about-text">
             <h2 className="section-title">Why Choose Kultivate?</h2>
             <p className="section-description">
-              Kultivate is more than just an app - it's your personal companion for building 
+              "Kultivate is more than just an app - it's your personal companion for building 
               lasting habits. Our scientifically-backed approach helps you achieve your goals 
-              with proven methods and intuitive design.
+              with proven methods and intuitive design."
             </p>
             <div className="about-features">
               <div className="feature-item">

@@ -61,8 +61,8 @@ const Services = () => {
         <div className="services-header">
           <h2 className="section-title">How It Works</h2>
           <p className="section-description">
-            Building better habits is simple with Kultivate. Follow these easy steps 
-            to transform your life and achieve your goals.
+            "Building better habits is simple with Kultivate. Follow these easy steps 
+            to transform your life and achieve your goals."
           </p>
         </div>
         

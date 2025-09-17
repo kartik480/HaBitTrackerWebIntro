@@ -1,0 +1,306 @@
+.ai-teacher {
+  padding: 8rem 0;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-teacher::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.ai-teacher::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(255, 255, 255, 0.03) 60deg, transparent 120deg),
+    conic-gradient(from 180deg at 30% 30%, transparent 0deg, rgba(255, 255, 255, 0.02) 90deg, transparent 180deg);
+  animation: rotate 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  font-style: italic;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.ai-benefits {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(10px);
+}
+
+.checkmark {
+  color: #fbbf24;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.benefit-item span:last-child {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.ai-teacher-content {
+  position: relative;
+  z-index: 2;
+}
+
+.ai-teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ai-teacher-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-teacher-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.ai-teacher-card:hover::before {
+  left: 100%;
+}
+
+.ai-teacher-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.ai-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
+}
+
+.ai-teacher-card:hover .ai-icon {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+.ai-teacher-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ai-teacher-card p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for cards */
+.ai-teacher-card {
+  opacity: 0;
+  transform: translateY(50px) scale(0.9);
+  animation: fadeInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.ai-teacher-card:nth-child(1) { animation-delay: 0.1s; }
+.ai-teacher-card:nth-child(2) { animation-delay: 0.2s; }
+.ai-teacher-card:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ai-teacher {
+    padding: 5rem 0;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .section-description {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+  
+  .ai-benefits {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .ai-teacher-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .ai-teacher-card {
+    padding: 2rem;
+  }
+  
+  .ai-icon {
+    font-size: 3rem;
+  }
+  
+  .ai-teacher-card h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-teacher {
+    padding: 4rem 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+  }
+  
+  .ai-benefits {
+    padding: 1rem;
+    margin: 0 0.5rem;
+  }
+  
+  .benefit-item {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+  }
+  
+  .benefit-item span:last-child {
+    font-size: 1rem;
+  }
+  
+  .ai-teacher-card {
+    padding: 1.5rem;
+  }
+  
+  .ai-icon {
+    font-size: 2.5rem;
+  }
+  
+  .ai-teacher-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .ai-teacher-card p {
+    font-size: 1rem;
+  }
+}

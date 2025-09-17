@@ -51,8 +51,8 @@ const Contact = () => {
         <div className="contact-header">
           <h2 className="section-title">Download Kultivate</h2>
           <p className="section-description">
-            Ready to transform your life? Download Kultivate now and start building 
-            better habits today. Available on iOS and Android.
+            "Ready to transform your life? Download Kultivate now and start building 
+            better habits today. Available on iOS and Android."
           </p>
         </div>
         

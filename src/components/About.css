@@ -11,16 +11,20 @@
   margin-bottom: 4rem;
 }
 
-.section-title {
+.about .section-title {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #000000;
+  color: #000000 !important;
   margin-bottom: 1rem;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
 }
 
-.section-description {
+.about .section-description {
   font-size: 1.1rem;
-  color: #666;
+  color: #333333 !important;
   line-height: 1.7;
   margin-bottom: 2rem;
 }
