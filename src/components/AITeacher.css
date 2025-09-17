@@ -38,9 +38,16 @@
   100% { transform: rotate(360deg); }
 }
 
+.ai-teacher-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
 .section-header {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 0;
   position: relative;
   z-index: 2;
 }
@@ -71,14 +78,47 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+.ai-teacher-content {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 4rem;
+}
+
+.ai-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ai-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.ai-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .ai-benefits {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 2;
 }
 
 .benefit-item {
@@ -113,104 +153,46 @@
   font-weight: 500;
 }
 
-.ai-teacher-content {
-  position: relative;
-  z-index: 2;
-}
 
-.ai-teacher-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5rem;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.ai-teacher-card {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(20px);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 25px;
-  padding: 2.5rem;
-  text-align: center;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(255, 255, 255, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  position: relative;
-  overflow: hidden;
-}
-
-.ai-teacher-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: left 0.6s ease;
-}
-
-.ai-teacher-card:hover::before {
-  left: 100%;
-}
-
-.ai-teacher-card:hover {
-  transform: translateY(-15px) scale(1.02);
-  box-shadow: 
-    0 30px 60px rgba(0, 0, 0, 0.2),
-    0 0 0 1px rgba(255, 255, 255, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
-}
 
 .ai-icon {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
   display: block;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-  transition: all 0.3s ease;
 }
 
-.ai-teacher-card:hover .ai-icon {
-  transform: scale(1.1) rotate(5deg);
-  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
-}
-
-.ai-teacher-card h3 {
-  font-size: 1.8rem;
-  font-weight: 700;
+.ai-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
   color: #ffffff;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.ai-teacher-card p {
+.ai-card p {
   color: rgba(255, 255, 255, 0.9);
-  line-height: 1.7;
-  font-size: 1.1rem;
+  line-height: 1.6;
+  font-size: 1rem;
   font-weight: 400;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Animation for cards */
-.ai-teacher-card {
+.ai-card {
   opacity: 0;
-  transform: translateY(50px) scale(0.9);
-  animation: fadeInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease forwards;
 }
 
-.ai-teacher-card:nth-child(1) { animation-delay: 0.1s; }
-.ai-teacher-card:nth-child(2) { animation-delay: 0.2s; }
-.ai-teacher-card:nth-child(3) { animation-delay: 0.3s; }
+.ai-card:nth-child(1) { animation-delay: 0.1s; }
+.ai-card:nth-child(2) { animation-delay: 0.2s; }
+.ai-card:nth-child(3) { animation-delay: 0.3s; }
 
 @keyframes fadeInUp {
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
 
@@ -233,27 +215,27 @@
     padding: 0 1rem;
   }
   
-  .ai-benefits {
-    padding: 1.5rem;
-    margin: 0 1rem;
-  }
-  
-  .ai-teacher-grid {
+  .ai-cards-container {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 0 1rem;
   }
   
-  .ai-teacher-card {
-    padding: 2rem;
+  .ai-card {
+    padding: 1.5rem;
   }
   
   .ai-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   
-  .ai-teacher-card h3 {
-    font-size: 1.5rem;
+  .ai-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .ai-benefits {
+    padding: 1.5rem;
+    margin: 0 1rem;
   }
 }
 
