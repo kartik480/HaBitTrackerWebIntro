@@ -57,8 +57,8 @@ const Hero = () => {
             
             <div className="floating-cards">
               <div className="floating-card card-1">
-                <div className="card-icon">📱</div>
-                <div className="card-text">Mobile App</div>
+                <div className="card-icon">🤖</div>
+                <div className="card-text">AI Teacher</div>
               </div>
               <div className="floating-card card-2">
                 <div className="card-icon">📊</div>
