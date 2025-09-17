@@ -158,8 +158,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 40px 30px;
+  padding: 40px 20px;
   height: calc(100% - 120px);
+  justify-items: center;
 }
 
 .app-icon {
@@ -286,7 +287,7 @@
   
   .app-grid {
     gap: 15px;
-    padding: 30px 20px;
+    padding: 30px 15px;
   }
   
   .app-icon {
@@ -339,7 +340,7 @@
   
   .app-grid {
     gap: 12px;
-    padding: 25px 15px;
+    padding: 25px 10px;
   }
   
   .app-icon {
@@ -398,7 +399,7 @@
   
   .app-grid {
     gap: 10px;
-    padding: 20px 12px;
+    padding: 20px 8px;
   }
   
   .app-icon {
